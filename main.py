@@ -7,12 +7,13 @@ intents = discord.Intents.all()
 
 keep_alive.keep_alive()
 client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
+
 @client.event
 async def on_ready():
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='-help'))
   print(f'Logged in as {client.user}\nReady!')
 
-
+#----Made by @Pi Boy#0175-----
 @client.listen('on_message')
 async def ned(message):  
     if message.author.bot:
