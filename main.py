@@ -21,11 +21,11 @@ async def ned(message):
     elif ':ned'in message.content :
         return
     elif message.content == ' ned':
-        await message.add_reaction ("<a:ned:821427067068481616>")
+        await message.add_reaction (":ned:")
     elif message.content == 'ned':
-        await message.add_reaction ("<a:ned:821427067068481616>")
+        await message.add_reaction (":ned:")
     elif ' ned'in message.content :
-        await message.add_reaction("<a:ned:821427067068481616>")
+        await message.add_reaction(":ned:")
 
 
 
