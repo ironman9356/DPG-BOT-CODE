@@ -4,7 +4,7 @@ import platform
 import psutil
 import time , datetime
 import uptime
-client = commands.Bot(command_prefix='-',owner_ids = {548530397034577930,782904629523644446},case_insensitive=True)
+client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
 start_time= time.time()
 
 

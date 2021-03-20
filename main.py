@@ -4,10 +4,9 @@ import os
 import re
 
 intents = discord.Intents.all()
-import keep_alive
 
 keep_alive.keep_alive()
-client = commands.Bot(command_prefix='-',owner_ids = {548530397034577930,782904629523644446},case_insensitive=True ,intents=intents)
+client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
 @client.event
 async def on_ready():
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='-help'))
@@ -33,5 +32,5 @@ async def ned(message):
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
-token=os.getenv('TOKEN')
-client.run(token)
+
+client.run('token')

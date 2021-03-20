@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-client = commands.Bot(command_prefix='-',owner_ids = {548530397034577930},case_insensitive=True)
+client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents))
 
 class Monsties(commands.Cog):
   def __init__(self,client):
