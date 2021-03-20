@@ -5,9 +5,6 @@ import psutil
 import time , datetime
 import uptime
 client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
-start_time= time.time()
-
-
 
 
 class Developer(commands.Cog):
@@ -26,7 +23,9 @@ class Developer(commands.Cog):
 
         
     print("Status Changed")
-
+  @chstatus.error
+  async def chstatus_error(self,ctx, error): 
+    await ctx.send('You are not the developer')
   
 
   @commands.command()
@@ -35,7 +34,9 @@ class Developer(commands.Cog):
     await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='-help'))
     await ctx.send('Status reseted')
     print('Status reseted')
-
+  @setstatus.error
+  async def setstatus_error(self,ctx, error): 
+    await ctx.send('You are not the developer')
 
 def setup(client):
     client.add_cog(Developer(client))
