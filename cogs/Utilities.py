@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncio
 
 
-client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
+client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True)
 
 class Utilities(commands.Cog):
     def __init__(self,client):
