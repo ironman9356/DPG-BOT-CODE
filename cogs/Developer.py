@@ -12,7 +12,7 @@ class Developer(commands.Cog):
     self.client=client
   @commands.command()
   @commands.is_owner()
-  async def chstatus(self,ctx,act,nm):
+  async def chstatus(self,ctx,act,*,nm):
     if act == "watch":
       await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=nm))
     if act == "listen":
