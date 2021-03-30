@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 
-client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
+client = commands.Bot(command_prefix='your prefix')
 
 class Dance(commands.Cog):
   def __init__(self,client):

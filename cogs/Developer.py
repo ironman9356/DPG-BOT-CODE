@@ -4,7 +4,7 @@ import platform
 import psutil
 import time , datetime
 import uptime
-client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True )
+client = commands.Bot(command_prefix='your prefix')
 
 
 class Developer(commands.Cog):

@@ -5,7 +5,6 @@ import re
 
 intents = discord.Intents.all()
 
-keep_alive.keep_alive()
 client = commands.Bot(command_prefix='your prefix',owner_ids = {your user id},case_insensitive=True ,intents=intents)
 
 @client.event
