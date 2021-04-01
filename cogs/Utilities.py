@@ -11,7 +11,11 @@ class Utilities(commands.Cog):
     @commands.command(description="Usage:")
     async def ping(self,ctx):
       """Delay in sending messages"""
-      await ctx.send(f'{round(self.client.latency * 1000)} ms')
+      start = time.perf_counter()
+      message = await ctx.send("Ping...")
+      end = time.perf_counter()
+      duration = (end - start) * 1000
+      await message.edit(content='Pong! {:.2f}ms'.format(duration))
 
     @commands.command(description="Usage:")
     async def avatar(self,ctx,member : discord.Member = None):
