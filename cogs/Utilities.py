@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
-
+import time
 
 client = commands.Bot(command_prefix="your prefix")
 
