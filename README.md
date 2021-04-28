@@ -9,4 +9,6 @@ I removed some commands due to complexity of code
 Also I wont be added all the code sorry
 
 
-You can self host
+You can self host  but it wont be as good as the original one 
+
+Also I will add slash commands when discord.py supports it

@@ -32,7 +32,7 @@ class Monsties(commands.Cog):
       lines = []
       for line in questions:
          lines.append(line)
-    embed=discord.Embed(title=f'{lines[random.randint(0,len(lines)-1)]}', color=0x46e2ec)#, description="\u200b"
+    embed=discord.Embed(title=f'{lines[random.randint(0,len(lines)-1)]}', color=0x46e2ec)
     embed.add_field(name='This chat is a little sleepy.',value='Answer the question to give the chat a little pep. How energizing...just like Sparky drinking a monstie.')
     embed.set_image(url='https://i.ibb.co/xYMQ3vN/discussgif.gif')
     await ctx.send(embed=embed)

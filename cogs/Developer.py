@@ -1,9 +1,7 @@
 import discord
 from discord.ext import commands
-import platform
-import psutil
-import time , datetime
-import uptime
+
+
 client = commands.Bot(command_prefix='your prefix')
 
 

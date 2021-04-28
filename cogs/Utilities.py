@@ -20,8 +20,8 @@ class Utilities(commands.Cog):
     @commands.command(description="Usage:")
     async def avatar(self,ctx,member : discord.Member = None):
       """How does the profile picture of a person look? Find out!"""
-      if not member:  # if Member is no mentioned
-        member = ctx.message.author  # set Member as the author
+      if not member:  
+        member = ctx.message.author 
       embed = discord.Embed(colour=discord.Colour.random())
       embed.set_image(url=member.avatar_url)
       await ctx.send(embed=embed)
@@ -33,6 +33,7 @@ class Utilities(commands.Cog):
       """BIG EMOTES"""
       embed = discord.Embed(colour=discord.Colour.random())
       embed.set_image(url=Custom_Emoji.url)
+      embed.set_footer(text=f"By {ctx.author}")
       await ctx.send(embed=embed)
       await asyncio.sleep(3)
       await ctx.message.delete()
