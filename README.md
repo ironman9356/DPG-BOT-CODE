@@ -6,7 +6,7 @@ I made this as if you invited the original @DPGBOT in your server it won't have 
 
 
 I removed some commands due to complexity of code 
-Also I wont be added all the code sorry
+Also I wont be adding all the code sorry
 
 
 You can self host  but it wont be as good as the original one 
