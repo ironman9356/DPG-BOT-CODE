@@ -45,6 +45,40 @@ class Utilities(commands.Cog):
       await msg.delete()
       return
 
+  @commands.command(help="Ask a question to your friends")
+  
+  async def poll(self,ctx,question,*options):
+        if len(options) > 10:
+            return await ctx.send("You cant have more than 10 options")
+        final_options = ""
+        for i in range(len(options)):
+            if options[i] == "":
+                continue
+            final_options += f"{i + 1}. {options[i]}\n"
+
+        embed = discord.Embed(title=question, description=final_options, color=0x46e2ec)
+        embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
+
+        reactions = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+
+        msg = await ctx.send(content=None, embed=embed)
+        a = 0
+        for v in range(len(options)):
+            if options[v] == '':
+                a += 1
+                continue
+            await msg.add_reaction(reactions[a])
+            a += 1
+
+            
+  @commands.command(help="For suggesting stuff for your server")
+  
+  async def suggest(self,ctx,*,suggestion):
+    embed=discord.Embed(title="Suggestion",description=suggestion,color=0x89aa00)
+    embed.set_author(name=ctx.author,icon_url=ctx.author.avatar_url)
+    suggest=await ctx.send(embed=embed)
+    await suggest.add_reaction("👍")
+    await suggest.add_reaction("👎")
 
 
 def setup(client):
